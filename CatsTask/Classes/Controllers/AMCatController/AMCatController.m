@@ -62,6 +62,7 @@
 
 - (IBAction)downloadCatAction:(id)sender
 {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.activityIndicatorView showActivityIndicatorAddedToView:self.view];
     
     __weak typeof(self)weakSelf = self;
@@ -85,6 +86,7 @@
                     weakSelf.catImageView.image = catImage;
                     weakSelf.catLinkLabel.text = weakSelf.savedCatURLString;
                     [weakSelf.activityIndicatorView hideActivityIndicator];
+                    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                 });
             });
         }
@@ -98,6 +100,7 @@
     }
     
     __weak typeof(self)weakSelf = self;
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     [self.activityIndicatorView showActivityIndicatorAddedToView:self.view];
     
     [self.networkManager uploadCatImageURL:self.savedCatURLString withCompletion:^(id deserealizedJson, NSError *error) {
@@ -106,6 +109,7 @@
             return;
         }
         [weakSelf.activityIndicatorView hideActivityIndicator];
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
         
         NSLog(@"json : %@", deserealizedJson);
         [weakSelf showAlertControllerWithTitle:deserealizedJson[@"objectId"] andMessage:deserealizedJson[@"createdAt"]];
