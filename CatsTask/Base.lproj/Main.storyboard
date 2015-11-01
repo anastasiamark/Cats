@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Cat Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="AMCatController" id="BYZ-38-t0r" customClass="AMCatController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vkg-rK-bbj" userLabel="Cat Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cat URL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-zz-7f6" userLabel="Cat Link Label">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bNl-0B-FLT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.25098040699958801" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bNl-0B-FLT"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bNl-0B-FLT"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AMButtonCat" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uog-ta-gcw" userLabel="Cat Button" customClass="AMButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.80000001192092896" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sH1-sE-kdC"/>
+                                    <constraint firstAttribute="width" constant="136" id="xq7-4f-nK3"/>
+                                </constraints>
+                                <state key="normal" title="Cat">
+                                    <color key="titleColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sH1-sE-kdC"/>
+                                        <exclude reference="xq7-4f-nK3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sH1-sE-kdC"/>
+                                        <include reference="xq7-4f-nK3"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="downloadCatAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyX-FY-EEl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="AMButtonLog" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bwr-7g-ROH" userLabel="Log Button" customClass="AMButton">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rcu-v6-YuY"/>
+                                    <constraint firstAttribute="width" constant="136" id="gFD-uX-j2a"/>
+                                </constraints>
+                                <state key="normal" title="Log">
+                                    <color key="titleColor" red="0.0" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Rcu-v6-YuY"/>
+                                        <exclude reference="gFD-uX-j2a"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Rcu-v6-YuY"/>
+                                        <include reference="gFD-uX-j2a"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="uploadCatURLClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pv-zc-CmS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90876035989796788" green="1" blue="0.73069884075882408" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vkg-rK-bbj" secondAttribute="trailing" constant="5" id="3kH-7p-GX5"/>
+                            <constraint firstAttribute="trailing" secondItem="Bwr-7g-ROH" secondAttribute="trailing" constant="5" id="6hV-6f-ogE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Bwr-7g-ROH" secondAttribute="bottom" constant="5" id="Ao3-vz-c5B"/>
+                            <constraint firstItem="wPz-zz-7f6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="KdZ-EB-Ttg"/>
+                            <constraint firstItem="wPz-zz-7f6" firstAttribute="top" secondItem="Vkg-rK-bbj" secondAttribute="bottom" constant="10" id="QeE-6n-ou6"/>
+                            <constraint firstItem="uog-ta-gcw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="VXL-DI-mGp"/>
+                            <constraint firstItem="Vkg-rK-bbj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="WNC-zO-pb6"/>
+                            <constraint firstAttribute="trailing" secondItem="wPz-zz-7f6" secondAttribute="trailing" constant="5" id="Ys8-WU-GqX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uog-ta-gcw" secondAttribute="bottom" constant="5" id="uDz-7u-jm2"/>
+                            <constraint firstItem="Vkg-rK-bbj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="vhi-9O-vwR"/>
+                            <constraint firstItem="uog-ta-gcw" firstAttribute="top" secondItem="wPz-zz-7f6" secondAttribute="bottom" constant="10" id="wIF-J2-eZg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Vkg-rK-bbj"/>
+                                <exclude reference="wPz-zz-7f6"/>
+                                <exclude reference="uog-ta-gcw"/>
+                                <exclude reference="Bwr-7g-ROH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Ao3-vz-c5B"/>
+                                <exclude reference="uDz-7u-jm2"/>
+                                <exclude reference="6hV-6f-ogE"/>
+                                <exclude reference="VXL-DI-mGp"/>
+                                <exclude reference="wIF-J2-eZg"/>
+                                <exclude reference="KdZ-EB-Ttg"/>
+                                <exclude reference="QeE-6n-ou6"/>
+                                <exclude reference="Ys8-WU-GqX"/>
+                                <exclude reference="3kH-7p-GX5"/>
+                                <exclude reference="WNC-zO-pb6"/>
+                                <exclude reference="vhi-9O-vwR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Vkg-rK-bbj"/>
+                                <include reference="wPz-zz-7f6"/>
+                                <include reference="uog-ta-gcw"/>
+                                <include reference="Bwr-7g-ROH"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Ao3-vz-c5B"/>
+                                <include reference="uDz-7u-jm2"/>
+                                <include reference="6hV-6f-ogE"/>
+                                <include reference="VXL-DI-mGp"/>
+                                <include reference="wIF-J2-eZg"/>
+                                <include reference="KdZ-EB-Ttg"/>
+                                <include reference="QeE-6n-ou6"/>
+                                <include reference="Ys8-WU-GqX"/>
+                                <include reference="3kH-7p-GX5"/>
+                                <include reference="WNC-zO-pb6"/>
+                                <include reference="vhi-9O-vwR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="Vkg-rK-bbj" id="ChI-oe-SvQ"/>
+                        <outlet property="catLinkLabel" destination="wPz-zz-7f6" id="sJR-lC-ohS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279" y="302.25"/>
+        </scene>
+    </scenes>
+</document>
