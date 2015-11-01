@@ -2,7 +2,7 @@
 //  AMNetworkManager.h
 //  CatsTask
 //
-//  Created by Eugenity on 29.10.15.
+//  Created by Mark on 29.10.15.
 //  Copyright © 2015 ThinkMobiles. All rights reserved.
 //
 

@@ -15,11 +15,11 @@
 		58B54BE61BE2BF79005F5307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B54BE51BE2BF79005F5307 /* Foundation.framework */; };
 		58B54BE81BE2BF84005F5307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B54BE71BE2BF84005F5307 /* UIKit.framework */; };
 		58B54BF11BE2C30B005F5307 /* AMCatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B54BF01BE2C30B005F5307 /* AMCatController.m */; };
-		58B54BF51BE2CBC2005F5307 /* AMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B54BF41BE2CBC2005F5307 /* AMNetworkManager.m */; };
 		58B54BFA1BE2F2EF005F5307 /* AMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B54BF91BE2F2EF005F5307 /* AMButton.m */; };
 		58D4B12E1BE4BAF000D193CB /* AMActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D4B12D1BE4BAF000D193CB /* AMActivityIndicatorView.m */; };
 		58D4B1301BE4BB0700D193CB /* AMActivityIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58D4B12F1BE4BB0700D193CB /* AMActivityIndicatorView.xib */; };
 		58D4B1361BE4BCD700D193CB /* UIView+MakeFromXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D4B1351BE4BCD700D193CB /* UIView+MakeFromXib.m */; };
+		58FCAF401BE6B84800ADCB07 /* AMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58FCAF3F1BE6B84800ADCB07 /* AMNetworkManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +35,6 @@
 		58B54BE71BE2BF84005F5307 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		58B54BEF1BE2C30B005F5307 /* AMCatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMCatController.h; path = Classes/Controllers/AMCatController/AMCatController.h; sourceTree = "<group>"; };
 		58B54BF01BE2C30B005F5307 /* AMCatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMCatController.m; path = Classes/Controllers/AMCatController/AMCatController.m; sourceTree = "<group>"; };
-		58B54BF31BE2CBC2005F5307 /* AMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMNetworkManager.h; path = Classes/Models/NetworkManager/AMNetworkManager.h; sourceTree = "<group>"; };
-		58B54BF41BE2CBC2005F5307 /* AMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMNetworkManager.m; path = Classes/Models/NetworkManager/AMNetworkManager.m; sourceTree = "<group>"; };
 		58B54BF81BE2F2EF005F5307 /* AMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMButton.h; path = Classes/Views/Button/AMButton.h; sourceTree = "<group>"; };
 		58B54BF91BE2F2EF005F5307 /* AMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMButton.m; path = Classes/Views/Button/AMButton.m; sourceTree = "<group>"; };
 		58D4B12C1BE4BAF000D193CB /* AMActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMActivityIndicatorView.h; path = Classes/Views/ActivityIndicatorView/AMActivityIndicatorView.h; sourceTree = "<group>"; };
@@ -44,6 +42,8 @@
 		58D4B12F1BE4BB0700D193CB /* AMActivityIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMActivityIndicatorView.xib; path = Classes/Views/ActivityIndicatorView/AMActivityIndicatorView.xib; sourceTree = "<group>"; };
 		58D4B1341BE4BCD700D193CB /* UIView+MakeFromXib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MakeFromXib.h"; path = "Classes/Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.h"; sourceTree = "<group>"; };
 		58D4B1351BE4BCD700D193CB /* UIView+MakeFromXib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+MakeFromXib.m"; path = "Classes/Categories/UIView/UIView+MakeFromXib/UIView+MakeFromXib.m"; sourceTree = "<group>"; };
+		58FCAF3E1BE6B84800ADCB07 /* AMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMNetworkManager.h; path = Classes/Managers/NetworkManager/AMNetworkManager.h; sourceTree = "<group>"; };
+		58FCAF3F1BE6B84800ADCB07 /* AMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMNetworkManager.m; path = Classes/Managers/NetworkManager/AMNetworkManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +111,7 @@
 		58B54BE91BE2BFA5005F5307 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				58FCAF3D1BE6B79200ADCB07 /* Managers */,
 				58D4B1311BE4BB9300D193CB /* Categories */,
 				58B54BEC1BE2C090005F5307 /* Views */,
 				58B54BEB1BE2C07C005F5307 /* Models */,
@@ -130,7 +131,6 @@
 		58B54BEB1BE2C07C005F5307 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				58B54BF21BE2CAF7005F5307 /* NetworkManager  */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -156,8 +156,8 @@
 		58B54BF21BE2CAF7005F5307 /* NetworkManager  */ = {
 			isa = PBXGroup;
 			children = (
-				58B54BF31BE2CBC2005F5307 /* AMNetworkManager.h */,
-				58B54BF41BE2CBC2005F5307 /* AMNetworkManager.m */,
+				58FCAF3E1BE6B84800ADCB07 /* AMNetworkManager.h */,
+				58FCAF3F1BE6B84800ADCB07 /* AMNetworkManager.m */,
 			);
 			name = "NetworkManager ";
 			sourceTree = "<group>";
@@ -204,6 +204,14 @@
 				58D4B1351BE4BCD700D193CB /* UIView+MakeFromXib.m */,
 			);
 			name = "UIView+MakeFromXib";
+			sourceTree = "<group>";
+		};
+		58FCAF3D1BE6B79200ADCB07 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				58B54BF21BE2CAF7005F5307 /* NetworkManager  */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,11 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58B54BF51BE2CBC2005F5307 /* AMNetworkManager.m in Sources */,
 				58D4B12E1BE4BAF000D193CB /* AMActivityIndicatorView.m in Sources */,
 				58B54BD21BE2BF37005F5307 /* AppDelegate.m in Sources */,
 				58D4B1361BE4BCD700D193CB /* UIView+MakeFromXib.m in Sources */,
 				58B54BF11BE2C30B005F5307 /* AMCatController.m in Sources */,
+				58FCAF401BE6B84800ADCB07 /* AMNetworkManager.m in Sources */,
 				58B54BFA1BE2F2EF005F5307 /* AMButton.m in Sources */,
 				58B54BCF1BE2BF37005F5307 /* main.m in Sources */,
 			);

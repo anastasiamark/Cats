@@ -1,8 +1,8 @@
 //
 //  UIView+MakeFromXib.h
 //
-//  Created by Konstantin on 29/08/2014.
-//  Copyright (c) 2014 kttsoft. All rights reserved.
+//  Created by Mark on 31.10.15.
+//  Copyright © 2015 ThinkMobiles. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

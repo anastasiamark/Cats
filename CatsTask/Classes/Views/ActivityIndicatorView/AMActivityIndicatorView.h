@@ -2,7 +2,7 @@
 //  AMActivityIndicatorView.h
 //  CatsTask
 //
-//  Created by Eugenity on 31.10.15.
+//  Created by Mark on 31.10.15.
 //  Copyright © 2015 ThinkMobiles. All rights reserved.
 //
 

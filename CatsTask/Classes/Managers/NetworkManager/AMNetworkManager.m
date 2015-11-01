@@ -2,17 +2,11 @@
 //  AMNetworkManager.m
 //  CatsTask
 //
-//  Created by Eugenity on 29.10.15.
+//  Created by Mark on 29.10.15.
 //  Copyright © 2015 ThinkMobiles. All rights reserved.
 //
 
 #import "AMNetworkManager.h"
-
-/*
-    {
-        "file" : imageURL
- }
- */
 
 static NSString *const kRandomCatURLString = @"http://random.cat/meow";
 
@@ -62,7 +56,7 @@ dispatch_queue_t serialization_queue()
             NSLog(@"json : %@", json);
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (completion) {
-                    completion(json, error);
+                    completion(json, error ? error : serializationError);
                 }
             });
         });
@@ -103,7 +97,7 @@ dispatch_queue_t serialization_queue()
                 id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&serializationError];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (completion) {
-                        completion(json, error);
+                        completion(json, error ? error : serializationError);
                     }
                 });
             });

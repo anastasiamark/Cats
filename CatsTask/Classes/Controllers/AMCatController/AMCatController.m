@@ -2,7 +2,7 @@
 //  AMCatController.m
 //  CatsTask
 //
-//  Created by Eugenity on 29.10.15.
+//  Created by Mark on 29.10.15.
 //  Copyright © 2015 ThinkMobiles. All rights reserved.
 //
 
@@ -66,6 +66,10 @@
     
     __weak typeof(self)weakSelf = self;
     [self.networkManager downloadCatImageWithCompletion:^(id deserealizedJson, NSError *error) {
+        if (error) {
+            [weakSelf showAlertControllerWithTitle:@"Error" andMessage:@"There was a loading data error"];
+            return;
+        }
         if ([deserealizedJson isKindOfClass:[NSDictionary class]]) {
             
             NSString *catURLString = deserealizedJson[@"file"];
@@ -79,6 +83,7 @@
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     weakSelf.catImageView.image = catImage;
+                    weakSelf.catLinkLabel.text = weakSelf.savedCatURLString;
                     [weakSelf.activityIndicatorView hideActivityIndicator];
                 });
             });
@@ -96,11 +101,13 @@
     [self.activityIndicatorView showActivityIndicatorAddedToView:self.view];
     
     [self.networkManager uploadCatImageURL:self.savedCatURLString withCompletion:^(id deserealizedJson, NSError *error) {
-        
+        if (error) {
+            [weakSelf showAlertControllerWithTitle:@"Error" andMessage:@"There was a loading data error"];
+            return;
+        }
         [weakSelf.activityIndicatorView hideActivityIndicator];
         
         NSLog(@"json : %@", deserealizedJson);
-        //show alert controller
         [weakSelf showAlertControllerWithTitle:deserealizedJson[@"objectId"] andMessage:deserealizedJson[@"createdAt"]];
     }];
 }
